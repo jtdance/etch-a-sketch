@@ -30,6 +30,10 @@ body {
 	color: black;
 	line-height: 1.6;
 	margin-bottom: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 h1 {
@@ -65,10 +69,10 @@ input {
 .main {
 	display: flex;
 	align-items: center;
-	justify-content: flex-start;
+	justify-content: center;
 	gap: 50px;
 	max-width: 1100px;
-	margin: 0 100px;
+	margin: 0 150px;
 }
 
 .settings {
@@ -190,3 +194,42 @@ a:hover {
 }
 
 /* ADD media queries */
+
+@media (max-width: 1200px) {
+	.main {
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+@media (max-width: 950px) {
+	.main {
+		gap: 50px;
+	}
+	.settings {
+		width: 150px;
+		gap: 16px;
+	}
+	.size-value {
+		margin-bottom: -4px;
+	}
+	.grid {
+		width: 400px;
+		height: 400px;
+	}
+}
+
+@media (max-width: 650px) {
+	.title {
+		font-size: 50px;
+	}
+
+	.main {
+		flex-direction: column-reverse;
+	}
+
+	.grid {
+		width: 300px;
+		height: 300px;
+	}
+}
